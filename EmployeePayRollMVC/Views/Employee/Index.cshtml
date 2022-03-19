@@ -3,12 +3,23 @@
 @{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="~/css/Index.css" />
 
-<h1>Index</h1>
+<div class="head">
+     <img src="~/Assets/logo.png" style="width:50px;height:47px" />
+     <div>
+          <span style="color: #82A70C">EMPLOYEE</span><br />
+          <span style="color: #42515F"> PAYROLL</span>
+     </div>
+ </div>
+ <div class="heading">
+    <h3>List Of Employee's</h3>
+ </div>
+ <div>
+     <a class="btn-success" asp-action="Create">+ Add Employee</a>
+ </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -36,6 +47,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.notes)
             </th>
+             <th>
+                @Html.Label("Actions")
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -49,7 +63,7 @@
                 @Html.DisplayFor(modelItem => item.emp_name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.profile_img)
+                <img src="Url.Content(Model.profile_img)">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.gender)
@@ -71,7 +85,6 @@
                 @Html.ActionLink("Details", "Details", new {  id=item.emp_id  }) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.emp_id })
             </td>
-        </tr>
-}
+        </tr>}
     </tbody>
 </table>

@@ -5,9 +5,17 @@
 }
  <link rel="stylesheet" href="~/css/create.css" />
 
-<h1>Create</h1>
+<div class="head">
+     <img src="~/Assets/logo.png" style="width:50px;height:47px" />
+     <div>
+          <span style="color: #82A70C">EMPLOYEE</span><br />
+          <span style="color: #42515F"> PAYROLL</span>
+     </div>
+ </div>
+ <div class="heading" >
+     <h3>Add New Employee</h3>
+ </div>
 
-<h4>EmployeeModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,8 +23,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="emp_id" class="control-label"></label>
-                <input asp-for="emp_id" class="form-control" />
+                <div>
+                    <input asp-for="emp_id" class="form-control" />
                 <span asp-validation-for="emp_id" class="text-danger"></span>
+                </div>
+                
             </div>
             <div class="form-group">
                 <label asp-for="emp_name" class="control-label"></label>
@@ -25,7 +36,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="profile_img" class="control-label"></label>
-                <input asp-for="profile_img" class="form-control" />
+                    <div >
+                        @Html.RadioButtonFor(model => model.profile_img, "~/Assets/Male (1).png")
+                        <img class="Profile-image-1 " src = "~/Assets/Male (1).png"  />
+                        @Html.RadioButtonFor(model => model.profile_img, "~/Assets/Female (3).png")
+                        <img class="Profile-image-1 " src="~/Assets/Female (3).png" />
+                        @Html.RadioButtonFor(model => model.profile_img, "~/Assets/Female (3).png")
+                        <img class="Profile-image-1 " src="~/Assets/Female (3).png" />
+                        @Html.RadioButtonFor(model => model.profile_img, "~/Assets/Female (5).png")
+                        <img class="Profile-image-1 " src="~/Assets/Female (5).png" />
+                        </div>
                 <span asp-validation-for="profile_img" class="text-danger"></span>
             </div>
             <div class="form-group">
