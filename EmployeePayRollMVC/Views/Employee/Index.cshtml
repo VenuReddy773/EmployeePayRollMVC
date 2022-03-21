@@ -24,28 +24,28 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.emp_id)
+                @Html.DisplayNameFor(model => model.Emp_id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.emp_name)
+                @Html.DisplayNameFor(model => model.Emp_name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.profile_img)
+                @Html.DisplayNameFor(model => model.Profile_img)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.gender)
+                @Html.DisplayNameFor(model => model.Gender)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.department)
+                @Html.DisplayNameFor(model => model.Department)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.salary)
+                @Html.DisplayNameFor(model => model.Salary)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.startDate)
+                @Html.DisplayNameFor(model => model.StartDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.notes)
+                @Html.DisplayNameFor(model => model.Notes)
             </th>
              <th>
                 @Html.Label("Actions")
@@ -57,33 +57,33 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.emp_id)
+                @Html.DisplayFor(modelItem => item.Emp_id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.emp_name)
+                @Html.DisplayFor(modelItem => item.Emp_name)
             </td>
             <td>
-                <img src="Url.Content(Model.profile_img)">
+                <img src="@Url.Content(item.Profile_img)"  />
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.gender)
+                @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.department)
+                @Html.DisplayFor(modelItem => item.Department)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.salary)
+                @Html.DisplayFor(modelItem => item.Salary)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.startDate)
+                @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.notes)
+                @Html.DisplayFor(modelItem => item.Notes)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.emp_id }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.emp_id  }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.emp_id })
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Emp_id }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.Emp_id  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Emp_id })
             </td>
         </tr>}
     </tbody>

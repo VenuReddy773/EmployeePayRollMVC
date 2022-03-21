@@ -93,7 +93,7 @@ namespace EmployeePayRollMVC.Controllers
         [HttpPost]
         public IActionResult Edit(int id,  EmployeeModel employee)
         {
-            if (id != employee.emp_id)
+            if (id != employee.Emp_id)
             {
                 return NotFound();
             }
